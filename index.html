@@ -1,97 +1,45 @@
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
-    *,
-    *:after,
-    *:before {
-      box-sizing: border-box;
-    }
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+  *, *:after, *:before { box-sizing: border-box; }
+  body { background-color: black; font-family: "Montserrat", sans-serif; }
+  main { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 96vh; text-align: center; }
+  h1 { color: #e7ebf2; font-size: 6.5rem; letter-spacing: 0.1em; margin: 0.025em 0; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,0.25); white-space: nowrap; }
+  @media (max-width: 30rem) { h1 { font-size: 4.5rem; } }
+  h1 > span { -webkit-animation: spooky 2s alternate infinite linear; animation: spooky 2s alternate infinite linear; color: #FFDD00; display: inline-block; }
+  h2 { color: #e7ebf2; margin-bottom: 0.4em; }
+  h5 { font-size: 70%; }
+  h2 > span, h5 > span { color: #FFDD00; font-size: 200%; -webkit-animation: spookx 2s alternate infinite linear; animation: spookx 2s alternate infinite linear; display: inline-block; }
+  @-webkit-keyframes spooky { from { transform: translatey(0.08em) scaley(0.95); } to { transform: translatey(-0.08em); } }
+  @keyframes spooky { from { transform: translatey(0.08em) scaley(0.95); } to { transform: translatey(-0.08em); } }
+  @-webkit-keyframes spookx { from { transform: translatex(0.08em) scaley(0.95); } to { transform: translatex(-0.08em); } }
+  @keyframes spookx { from { transform: translatex(0.08em) scaley(0.95); } to { transform: translatex(-0.08em); } }
 
-    body {
-      background-color: black;
-      font-family: "Montserrat", sans-serif;
-    }
-
-    main {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      height: 96vh;
-      justify-content: center;
-      text-align: center;
-    }
-
-    h1 {
-      color: #e7ebf2;
-      font-size: 6.5rem;
-      letter-spacing: 0.1em;
-      margin: 0.025em 0;
-      text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.25);
-      white-space: nowrap;
-    }
-    @media (max-width: 30rem) {
-      h1 {
-        font-size: 4.5rem;
-      }
-    }
-    h1 > span {
-      -webkit-animation: spooky 2s alternate infinite linear;
-              animation: spooky 2s alternate infinite linear;
-      color: #FFDD00;
-      display: inline-block;
-    }
-
-    h2 {
-      color: #e7ebf2;
-      margin-bottom: 0.4em;
-    }
-
-    h2 > span{
-      color: #FFDD00;
-      font-size: 200%;
-
-      -webkit-animation: spookx 2s alternate infinite linear;
-      animation: spookx 2s alternate infinite linear;
-      display: inline-block;
-    }
-
-    @-webkit-keyframes spooky {
-      from {
-        transform: translatey(0.08em) scaley(0.95);
-      }
-      to {
-        transform: translatey(-0.08em);
-      }
-    }
-
-    @keyframes spooky {
-      from {
-        transform: translatey(0.08em) scaley(0.95);
-      }
-      to {
-        transform: translatey(-0.08em);
-      }
-    }
-
-    @-webkit-keyframes spookx {
-      from {
-        transform: translatex(0.08em) scaley(0.95);
-      }
-      to {
-        transform: translatex(-0.08em);
-      }
-    }
-    @keyframes spookx {
-      from {
-        transform: translatex(0.08em) scaley(0.95);
-      }
-      to {
-        transform: translatex(-0.08em);
-      }
-    }
-  </style>
+  .about { max-width: 800px; margin: 2rem auto; padding: 1rem; text-align: left; }
+  .about h3, .about h4 { color: #FFDD00; margin-bottom: 0.5rem; }
+  .about p, .about li { color: #e7ebf2; font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .about ul { list-style: none; padding-left: 0; }
+  h5 a { color: #e7ebf2; text-decoration: none; }
+  h5 a:hover { text-decoration: underline; }
+</style>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath fill='%23FFDD00' d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z'/%3E%3C/svg%3E">
 <main>
   <h1>Off<span>line</span></h1>
   <h2><span>vojcik</span> is offline...</h2>
+  <section class="about">
+    <h3>Who am I?</h3>
+    <p>A technology enthusiast passionate about new technologies and technical innovations.</p>
+    <p>I enjoy developing scripts and applications, leveraging a diverse array of APIs to automate tasks, streamline workflows, and experiment with innovative solutions.</p>
+    <h4>Coding:</h4>
+    <ul>
+      <li>Currently, I mostly use Bash, Python, and JavaScript.</li>
+      <li>In my spare time, I expand my knowledge with various improvements or implement my ideas for automating various processes.</li>
+      <li>I am also developing my Bot project, which will be integrated with Discord, Twitch, and a web application. (It is not public at the moment, but <b>will be!</b>)</li>
+    </ul>
+    <h4>Work:</h4>
+    <p>Currently, I work as a systems and application administrator, with the majority of systems based on Linux 🐧</p>
+    <h4>Future:</h4>
+    <p>Learning the C language and exploring the Linux kernel in depth.</p>
+  </section>
+  <h5><span>GitHub: <a href="https://github.com/V0jcik" target="_blank">V0jcik</a></span></h5>
 </main>
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="vojcik" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="25" data-y_margin="25"></script>
