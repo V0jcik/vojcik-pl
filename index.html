@@ -1,8 +1,8 @@
 <style>
   @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
   *, *:after, *:before { box-sizing: border-box; }
-  body { font-size: 90%; background-color: black; font-family: 'Roboto Mono', monospace; }
+  body { font-size: 90%; background-color: black; font-family: "Montserrat", sans-serif; }
   main { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 96vh; text-align: center; }
   h1 { color: #e7ebf2; font-size: 6.5rem; letter-spacing: 0.1em; margin: 0.5em 0 0.025em; text-shadow: 0.05em 0.05em 0 rgba(0,0,0,0.25); white-space: nowrap; }
   @media (max-width: 30rem) { h1 { font-size: 4.5rem; } }
@@ -15,6 +15,7 @@
   @-webkit-keyframes spookx { from { transform: translatex(0.08em) scaley(0.95); } to { transform: translatex(-0.08em); } }
   @keyframes spookx { from { transform: translatex(0.08em) scaley(0.95); } to { transform: translatex(-0.08em); } }
 
+  .coding { font-family: 'Roboto Mono', monospace; }
   .about { max-width: 900px; margin: 2rem auto; padding: 1rem; text-align: left; }
   .about h3, .about h4 { color: #FFDD00; margin-bottom: 0.5rem; }
   .about p, .about li { color: #e7ebf2; font-size: 1.1rem; margin-bottom: 0.5rem; }
@@ -33,12 +34,14 @@
     <h3>Who am I?</h3>
     <p>A technology enthusiast passionate about new technologies and technical innovations.</p>
     <p>I enjoy developing scripts and applications, leveraging a diverse array of APIs to automate tasks, streamline workflows, and experiment with innovative solutions.</p>
-    <h4>Coding:</h4>
-    <ul>
-      <li>Currently, I mostly use Bash, Python, and JavaScript.</li>
-      <li>In my spare time, I expand my knowledge with various improvements or implement my ideas for automating various processes.</li>
-      <li>I am also developing my Bot project, which will be integrated with Discord, Twitch, and a web application. (It is not public at the moment, but <b>will be!</b>)</li>
-    </ul>
+    <section class="coding">
+      <h4>Coding:</h4>
+      <ul>
+        <li>Currently, I mostly use Bash, Python, and JavaScript.</li>
+        <li>In my spare time, I expand my knowledge with various improvements or implement my ideas for automating various processes.</li>
+        <li>I am also developing my Bot project, which will be integrated with Discord, Twitch, and a web application. (It is not public at the moment, but <b>will be!</b>)</li>
+      </ul>
+    </section>  
     <h4>Work:</h4>
     <p>Currently, I work as a systems and application administrator, with the majority of systems based on Linux 🐧</p>
     <h4>Future:</h4>
